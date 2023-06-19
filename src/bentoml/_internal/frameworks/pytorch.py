@@ -182,7 +182,7 @@ def save_model(
     ) as bento_model:
         weight_file = bento_model.path_of(MODEL_FILENAME)
         with open(weight_file, "wb") as file:
-            torch.save(model, file, pickle_module=cloudpickle)  # type: ignore
+            torch.save(model, file)  # type: ignore
 
         return bento_model
 
