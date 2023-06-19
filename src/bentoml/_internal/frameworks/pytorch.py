@@ -152,7 +152,7 @@ def save_model(
 
         tag = bentoml.pytorch.save("resnet50", resnet50)
     """
-    if not LazyType("torch.nn.Module").isinstance(model):
+    if not isinstance(model, torch.nn.Module):
         raise TypeError(f"Given model ({model}) is not a torch.nn.Module.")
 
     context: ModelContext = ModelContext(
