@@ -59,7 +59,7 @@ def clean_bentoml_version(bentoml_version: str) -> str:
 # Find BentoML version managed by setuptools_scm
 BENTOML_VERSION = __version__
 # Get clean BentoML version indicating latest PyPI release. E.g. 1.0.0.post => 1.0.0
-CLEAN_BENTOML_VERSION: str = clean_bentoml_version(BENTOML_VERSION)
+#CLEAN_BENTOML_VERSION: str = clean_bentoml_version(BENTOML_VERSION)
 
 
 @lru_cache(maxsize=1)
