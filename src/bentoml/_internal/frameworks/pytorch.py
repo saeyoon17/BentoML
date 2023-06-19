@@ -182,8 +182,8 @@ def save_model(
     ) as bento_model:
         weight_file = bento_model.path_of(MODEL_FILENAME)
         with open(weight_file, "wb") as file:
-            torch.save(model, file)  # type: ignore
-
+            # torch.save(model, file)  # type: ignore
+            torch.save({'model_state_dict': model.state_dict(),}, file)
         return bento_model
 
 
